@@ -1,4 +1,6 @@
-﻿double numberA = 12;
-double numberB = 5;
-double resalt = numberA / numberB;
+﻿int numberA = new Random().Next(1, 10);
+Console.WriteLine(numberA);
+int numberB = new Random().Next(1, 10);
+Console.WriteLine(numberB);
+int resalt = numberA + numberB;
 Console.WriteLine (resalt);
