@@ -11,18 +11,14 @@ int a2 = 65;
 int a3 = 31;
 
 int b1 = 41;
-int b2 = 51;
+int b2 = 451;
 int b3 = 16;
 
 int c1 = 71;
 int c2 = 18;
 int c3 = 99;
 
-int max1 = Max(a1, a2, a3);
-int max2 = Max(b1, b2, b3);
-int max3 = Max(c1, c2, c3);
-
-int max = Max(max1, max2, max3);
+int max = Max(Max(a1, a2, a3), Max(b1, b2, b3), Max(c1, c2, c3));
 
 // if (a2>max) max=a2;
 // if (a3>max) max=a3;
