@@ -19,7 +19,7 @@ else
     }
     if (max!=number3 && max>number3)
     {
-        Console.WriteLine($"Максимальное число {max}");
+        Console.WriteLine("Максимальное число" + max);
     }
     else 
     {
