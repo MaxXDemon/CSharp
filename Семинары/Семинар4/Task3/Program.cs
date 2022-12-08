@@ -9,7 +9,7 @@ void FillArray(int[]array)
         array[index]=new Random().Next(0,2);
         Console.Write(array[index]);
     }
-    return;
+        return;
 }
 FillArray(array);
 
