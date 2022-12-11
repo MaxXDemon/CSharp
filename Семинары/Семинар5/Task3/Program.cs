@@ -11,7 +11,7 @@ int [] FillingArray(int [] array)
 {
     for(int i = 0; i<array.Length; i++)
     {
-        array[i] = new Random().Next(0, 10);
+        array[i] = new Random().Next(100, 1000);
     }
     return array;
 }
