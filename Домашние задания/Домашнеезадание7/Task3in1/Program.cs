@@ -84,4 +84,6 @@ switch (ChekingNumber())
         ArithmeticMean(CreateAndPrintArrayIntegers());
         break;
 
+    default: Console.WriteLine("Такой задачи нет.");
+        break; 
 }
