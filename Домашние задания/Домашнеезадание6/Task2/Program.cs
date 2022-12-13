@@ -18,28 +18,28 @@ double CheckNumber()
     {
         return number;
     }
-    else throw new ArgumentException("Это не число, попробуйте снова:"); 
+    else throw new ArgumentException("Это не число, попробуйте снова:");
 }
 
 void IntersectionPoint(double b1, double k1, double b2, double k2)
 {
-    
-    if ((k1-k2==0) && (b1-b2==0)) 
+
+    if ((k1 - k2 == 0) && (b1 - b2 == 0))
     {
         Console.WriteLine($"Данные прямые совпадают и имеют бесконечное число пересечений");
     }
-    else if ((k1-k2==0)) 
+    else if ((k1 - k2 == 0))
     {
         Console.WriteLine($"Данные прямые параллельны и не имеют точек пересечения");
-    }    
-        else
-        {
-            double x=0;
-            double y=0;
-            x = (b2 - b1) / (k1 - k2);
-            y = k2 * ((b2 - b1) / (k1-k2)) + b2;
-            Console.WriteLine($"Точка пересечения прямых находится в координатах ({x};{y}");
-        }
+    }
+    else
+    {
+        double x = 0;
+        double y = 0;
+        x = (b2 - b1) / (k1 - k2);
+        y = k2 * ((b2 - b1) / (k1 - k2)) + b2;
+        Console.WriteLine($"Точка пересечения прямых находится в координатах ({x};{y}");
+    }
 }
 Console.WriteLine("Введите b1, k1, b2 и k2 соответственно:");
-IntersectionPoint(CheckNumber(),CheckNumber(),CheckNumber(),CheckNumber());
+IntersectionPoint(CheckNumber(), CheckNumber(), CheckNumber(), CheckNumber());

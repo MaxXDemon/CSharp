@@ -6,13 +6,13 @@
 int CountNumbers()
 {
     int count = 0;
-    while (int.TryParse(Console.ReadLine(), out int number)==true)
+    while (int.TryParse(Console.ReadLine(), out int number) == true)
+    {
+        if (number > 0)
         {
-            if (number > 0)
-            {
-                count++;
-            }
+            count++;
         }
+    }
     return count;
 }
 Console.WriteLine("Для выхода введите любой символ, кроме числа:");
