@@ -39,7 +39,24 @@ int SummNumbers(int firstNumber, int lastNumber)
        
 }
 
-Console.WriteLine("Введите номер задания от 1 до 3:");
+int AkkermanFunction(int mNumber, int nNumber)
+{
+    if (mNumber==0)
+    {
+        return nNumber+1; 
+    }
+    else if ((mNumber>0)&&(nNumber==0))
+    {
+        return AkkermanFunction(mNumber-1, 1);
+    }
+    else if ((mNumber>0)&&(nNumber>0))
+    {
+        return AkkermanFunction(mNumber-1, AkkermanFunction(mNumber,nNumber-1));
+    }
+    else return AkkermanFunction(mNumber,nNumber);
+}
+
+Console.WriteLine("Введите номер задания от 1 до 4:");
 switch (CheckNumber())
 {
     case (1):
@@ -73,7 +90,13 @@ switch (CheckNumber())
         Console.WriteLine(SummNumbers(firstNumber,lastNumber));
     break;
 
-    
-
+    case (4):
+        Console.WriteLine(@"Задача 68: Напишите программу вычисления функции Аккермана
+        с помощью рекурсии. Даны два неотрицательных числа m и n.
+        m = 2, n = 3 -> A(m,n) = 9
+        m = 3, n = 2 -> A(m,n) = 29");
+        Console.WriteLine("Введите два числа m и n: ");
+        Console.WriteLine(AkkermanFunction(CheckNumber(),CheckNumber()));
+    break;
 }
 
