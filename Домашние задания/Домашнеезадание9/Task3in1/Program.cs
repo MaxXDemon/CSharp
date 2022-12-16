@@ -7,7 +7,7 @@
 
 void CheckingCondition(int firstNumber, int lastNumber)
 {
-    if (firstNumber >= lastNumber)
+    if (firstNumber > lastNumber)
         Console.WriteLine("Введенные значения не соответствуют условию поставленной задачи.");
 }
 
@@ -20,12 +20,14 @@ void PrintNumbers(int firstNumber)
     }
 }
 
-void SummNumbers(int firstNumber, int lastNumber)
+int SummNumbers(int firstNumber, int lastNumber)
 {
-    if (firstNumber < lastNumber)
-        SummNumbers(firstNumber++, lastNumber);
-    else
-        Console.WriteLine(firstNumber);
+    if (firstNumber<=lastNumber)
+        {
+            return firstNumber+SummNumbers(firstNumber+1,lastNumber);
+        }
+    else return 0;
+       
 }
 
 Console.WriteLine("Введите номер задания от 1 до 3:");
@@ -36,18 +38,20 @@ switch (CheckNumber())
         Напишите программу, которая выведет все натуральные числа в промежутке от N до 1. 
         Выполнить с помощью рекурсии.");
         Console.WriteLine("Введите любое число: ");
-        int firstNumber = CheckNumber();
-        PrintNumbers(firstNumber);
+        PrintNumbers(CheckNumber());
         break;
 
     case (2):
         Console.WriteLine(@"Задача 2: Задайте значения M и N. Напишите программу, 
         которая найдёт сумму натуральных элементов в промежутке от M до N.");
+        
         Console.WriteLine("Введите два числа (первое должно быть меньше второго): ");
+        
         int firstNumber = CheckNumber();
         int lastNumber = CheckNumber();
-        CheckNumber(firstNumber, lastNumber);
-        SummNumbers(firstNumber, lastNumber);
+        CheckingCondition(firstNumber,lastNumber);
+        Console.WriteLine(SummNumbers(firstNumber,lastNumber));
+    break;
 
 }
 
